@@ -14,7 +14,8 @@ Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o
  Esse projeto visa agrupar todos os curtas, produzidos pelos alunos do primeiro ano do senac, em um site só!
 
 ## 👣 Como executar
-1. git clone 
+1. git clone https://github.com/dudaordahy/jogo-da-escola
+2. cd Reciclolândia
 
 ## 🖊 funcionalidades
 1.  Facilitar o acesso aos curtas;
