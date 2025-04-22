@@ -1,9 +1,7 @@
-# Projeto de jogo
-
-## 🎬 Tema Do Projeto
+# 🎮 Nome Do Jogo
  O nosso tema é poluição.
 
-## 🤓 Área do Projeto
+## 🤓 Sobre o Jogo
  Artes e Linguagens.
 
 ## 👥 Integrantes
