@@ -1,5 +1,5 @@
-# 🎮 Nome Do Jogo
- O nosso tema é poluição.
+# 🎮 Reciclândia
+Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o tempo acabe.
 
 ## 🤓 Sobre o Jogo
  Artes e Linguagens.
@@ -8,10 +8,8 @@
 | Nomes            | GitHub                  |
 | ---------------- | ----------------------- |
 | Eduarda O.       | [github.com/dudaordahy](https://github.com/dudaordahy) |
-| Enrique R.       | [github.com/Enriquerodrigues09](https://github.com/Enriquerodrigues09) |
-| Luiz Henrique L. | [github.com/luizhenrique830](https://github.com/luizhenrique830) |
-| Lucas L.         | [github.com/Lucaslimaxz](https://github.com/Lucaslimaxz) |
-| Miguel S.        | [github.com/Migss2](https://github.com/Migss2) |
+| Maria Rita B.    | [github.com/Enriquerodrigues09](https://github.com/Enriquerodrigues09) |
+| Valentina F.     | [github.com/valentinabfarias](https://github.com/valentinabfarias) |
 
 ## 📃 Descrição do Projeto
  Esse projeto visa agrupar todos os curtas, produzidos pelos alunos do primeiro ano do senac, em um site só!
