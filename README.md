@@ -11,7 +11,10 @@ Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o
 -  Ambiente de Desenvolvimento: VSCode, GitHub.
 
 ## 📃 Como jogar
-
+- Use as setas do teclado para se movimentar em direção aos lixos;
+- Use o botão direito do mouse para coletar os resíduos;
+- Cada lixo coletado conta como um ponto;
+- Você deve coletar o máximo de resíduos dentro do tempo de 1 minuto.
 
 ## 👣 Como executar
 1. Clone o repositório - https://github.com/dudaordahy/jogo-da-escola;
@@ -25,7 +28,9 @@ Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o
 - Tela de vitória ou derrota.
 
 ## 🗣 Melhorias futuras
-
+- Adicionar outros cenários;
+- Adicionar níveis de dificuldade;
+- Compatibilidade com o mobile;
 
 ## 👥 Integrantes
 | Nomes            | GitHub                  |
