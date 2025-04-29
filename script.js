@@ -1,27 +1,13 @@
 kaboom({
     global: true,  // Define que as variáveis e funções serão globais
     canvas: document.querySelector("#game"),  // Define o canvas onde o jogo será renderizado
-    background: [white],  // Cor do fundo do jogo (RGB)
+    background: [333, 333, 333],  // Cor do fundo do jogo (RGB)
     width: window.innerWidth,  // Largura da tela igual à largura da janela do navegador
     height: window.innerHeight,  // Altura da tela igual à altura da janela do navegador
     scale: 1,  // Escala da tela (não há escalamento)
 });
 
 loadSprite("princesa_ana", "https://i.imgur.com/vSQku0M.jpg");  // URL do sprite do personagem
-
-loadSound("backgroundMusic", "https://res.cloudinary.com/dz5qhfipn/video/upload/v1745798091/musica_jugpe2.mp3")
-    .then(() => {
-        console.log("Música carregada com sucesso");
-
-        // Agora que a música foi carregada, podemos aguardar o clique do mouse
-        mouseClick(() => {
-            console.log("Clique do mouse detectado!");
-            startMusic();  // Tocar a música quando o usuário clicar
-        });
-})
-    .catch((err) => {
-        console.error("Erro ao carregar a música:", err);
-});
 
 const player = add([
         sprite("princesa_ana"),  // Carrega o sprite do personagem
@@ -40,7 +26,7 @@ const ground = add([
     color(95, 205, 228),  // Cor do chão (RGB)
 ]);
 
-player.gravityScale = 1.5;  // A gravidade é ligeiramente aumentada para tornar a queda mais visível
+setGravity(1200);
 
 const speed = 200;  // O personagem vai se mover a 200 pixels por segundo
 
@@ -71,6 +57,13 @@ onKeyDown("down", () => {
 
 // Controle de movimento para cima
 onKeyDown("up", () => {
-    player.jump(0, -speed); // O personagem pula
+    if (player.isGrounded()) {
+        player.jump(600);
+    }
 });
 
+onKeyPress("space", () => {
+    if (player.isGrounded()) {
+        player.jump(600);
+    }
+});
