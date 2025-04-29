@@ -8,6 +8,15 @@ kaboom({
 });
 
 loadSprite("princesa_ana", "https://i.imgur.com/vSQku0M.jpg");  // URL do sprite do personagem
+loadSprite("item", " ");
+
+let pontos = 0;
+
+const score = add([
+    text("Pontos: 0"),
+    pos(10, 10),
+    layer("ui"),
+]);
 
 const player = add([
         sprite("princesa_ana"),  // Carrega o sprite do personagem
@@ -67,3 +76,39 @@ onKeyPress("space", () => {
         player.jump(600);
     }
 });
+
+let item;
+let podeClicar = false; // Flag de controle
+
+// Cria um item e define evento de clique
+function criarItem() {
+    item = add([
+        sprite("item"),
+        pos(rand(0, width() - 32), rand(0, height() - 32)),
+        area(),
+        "item",
+    ]);
+
+    item.onClick(() => {
+        if (podeClicar) {
+            pontos++;
+            score.text = "Pontos: " + pontos;
+            destroy(item);
+            podeClicar = false;
+            criarItem(); // Novo item
+        }
+    });
+}
+
+// Detecta início da colisão
+player.onCollide("item", () => {
+    podeClicar = true;
+});
+
+// Detecta fim da colisão
+player.onCollideEnd("item", () => {
+    podeClicar = false;
+});
+
+criarItem();
+
