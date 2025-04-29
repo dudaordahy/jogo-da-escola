@@ -5,10 +5,15 @@ kaboom({
     width: window.innerWidth,  // Largura da tela igual à largura da janela do navegador
     height: window.innerHeight,  // Altura da tela igual à altura da janela do navegador
     scale: 1,  // Escala da tela (não há escalamento)
-});
+    layers: [
+        "bg",      // camada de fundo
+        "game",    // camada padrão
+        "ui",      // camada de interface
+      ],
+});  
 
 loadSprite("princesa_ana", "https://i.imgur.com/vSQku0M.jpg");  // URL do sprite do personagem
-loadSprite("item", " ");
+loadSprite("item", "https://i.imgur.com/fVVaD5s.png");
 
 let pontos = 0;
 
