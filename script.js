@@ -116,4 +116,3 @@ player.onCollideEnd("item", () => {
 });
 
 criarItem();
-
