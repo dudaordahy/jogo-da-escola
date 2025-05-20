@@ -11,6 +11,8 @@ canvas.height = window.innerHeight;
 // Variável que armazena os pontos do jogador
 let pontos = 0;
 
+let formattedTime = "00:00:00"
+
 // Variável que indica se o jogador pode clicar no item
 let podeClicar = false;
 
@@ -57,6 +59,12 @@ function drawScore() {
     ctx.fillStyle = "black";                // Cor do texto
     ctx.font = "20px sans-serif";           // Fonte do texto
     ctx.fillText("Lixo🗑️: " + pontos, 1000, 30); // Escreve o texto na tela
+}
+
+function drawTimer() {
+    ctx.fillStyle = "black";                // Cor do texto
+    ctx.font = "20px sans-serif";           // Fonte do texto
+    ctx.fillText(formattedTime, 10, 30);
 }
 
 // Atualiza a posição e estado do jogador
@@ -117,7 +125,7 @@ let startTime;
 
 function startTimer() {
   startTime = Date.now();
- 
+  console.log("to aqui")
   updateTimer();
 }
 
@@ -127,12 +135,12 @@ function updateTimer() {
   const minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
   const hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
 
-  const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+  formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  ctx.font = '20px Arial';
-  ctx.fillText(formattedTime, 10, 50);
+  if(minutes >= 2) {
     
+  }
+  console.log("update", formattedTime)
   setTimeout(updateTimer, 1000); // Update every second
 }
 
@@ -162,11 +170,12 @@ function loop() {
     if (item.visible) drawRect(item);                 // Desenha o item se visível
 
     drawScore();                                      // Mostra a pontuação
-    startTimer();
-
+    drawTimer();
     requestAnimationFrame(loop);    
     
     
 // Chama o próximo frame
 }
+startTimer();
+
 loop();
