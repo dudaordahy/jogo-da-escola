@@ -4,6 +4,8 @@ const canvas = document.querySelector("#game");
 // Obtém o contexto 2D para desenhar no canvas
 const ctx = canvas.getContext("2d");
 
+const finalizacao = document.getElementById("finalizacao")
+
 // Define a largura e altura do canvas como o tamanho da janela
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
@@ -125,7 +127,6 @@ let startTime;
 
 function startTimer() {
   startTime = Date.now();
-  console.log("to aqui")
   updateTimer();
 }
 
@@ -138,9 +139,9 @@ function updateTimer() {
   formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
 
   if(minutes >= 2) {
-    
-  }
-  console.log("update", formattedTime)
+    finalizacao.style.display = "block";
+}
+
   setTimeout(updateTimer, 1000); // Update every second
 }
 
@@ -172,7 +173,6 @@ function loop() {
     drawScore();                                      // Mostra a pontuação
     drawTimer();
     requestAnimationFrame(loop);    
-    
     
 // Chama o próximo frame
 }

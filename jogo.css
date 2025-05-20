@@ -10,7 +10,7 @@ canvas {
     display: block;   /* remove espaço extra embaixo do canvas */
 }
 
-#finalização{
+#finalizacao{
     background-color: rgb(255, 255, 255);
     color: darkred;
     width: 300px;
@@ -21,6 +21,7 @@ canvas {
     transform: translate(-50%, -50%);
     text-align: center;
     border-color: darkred;
+    display: none;
     border-radius: 10px;
 }
 
