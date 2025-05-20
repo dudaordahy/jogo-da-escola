@@ -24,7 +24,7 @@ const player = {
     vy: 0,                                 // Velocidade vertical (para o pulo)
     gravity: 0.5,                          // Gravidade que afeta o pulo
     onGround: false,                       // Indica se está no chão
-    color: "pink"                          // Cor do jogador
+    color: "black"                          // Cor do jogador
 };
 
 // Objeto que representa o chão
@@ -56,7 +56,7 @@ function drawRect(obj) {
 function drawScore() {
     ctx.fillStyle = "black";                // Cor do texto
     ctx.font = "20px sans-serif";           // Fonte do texto
-    ctx.fillText("Pontos: " + pontos, 10, 30); // Escreve o texto na tela
+    ctx.fillText("Lixo🗑️: " + pontos, 1000, 30); // Escreve o texto na tela
 }
 
 // Atualiza a posição e estado do jogador
@@ -111,6 +111,35 @@ document.addEventListener("keydown", e => {
     }
 });
 
+// Inicia o loop do jogo
+
+let startTime;
+
+function startTimer() {
+  startTime = Date.now();
+ 
+  updateTimer();
+}
+
+function updateTimer() {
+  const elapsedTime = Date.now() - startTime;
+  const seconds = Math.floor((elapsedTime / 1000) % 60);
+  const minutes = Math.floor((elapsedTime / (1000 * 60)) % 60);
+  const hours = Math.floor((elapsedTime / (1000 * 60 * 60)) % 24);
+
+  const formattedTime = `${pad(hours)}:${pad(minutes)}:${pad(seconds)}`;
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.font = '20px Arial';
+  ctx.fillText(formattedTime, 10, 50);
+    
+  setTimeout(updateTimer, 1000); // Update every second
+}
+
+function pad(number) {
+  return number < 10 ? '0' + number : number;
+}
+
 // Adiciona evento de clique do mouse no canvas
 canvas.addEventListener("click", handleItemClick);
 
@@ -133,9 +162,15 @@ function loop() {
     if (item.visible) drawRect(item);                 // Desenha o item se visível
 
     drawScore();                                      // Mostra a pontuação
+    startTimer();
 
-    requestAnimationFrame(loop);                      // Chama o próximo frame
+    requestAnimationFrame(loop);    
+    
+    
+// Chama o próximo frame
 }
 
-// Inicia o loop do jogo
+
+
+
 loop();
