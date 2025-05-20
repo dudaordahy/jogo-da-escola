@@ -12,6 +12,7 @@ canvas {
 
 #finalizacao{
     background-color: rgb(255, 255, 255);
+    font-size: large;
     color: darkred;
     width: 300px;
     height: auto;
@@ -20,8 +21,12 @@ canvas {
     left: 50%;
     transform: translate(-50%, -50%);
     text-align: center;
-    border-color: darkred;
-    display: none;
     border-radius: 10px;
+}
+
+#reiniciar{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    font-size: large;
 }
 

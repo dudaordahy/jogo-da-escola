@@ -140,7 +140,14 @@ function updateTimer() {
 
   if(minutes >= 2) {
     finalizacao.style.display = "block";
-}
+    formattedTime = "00:00:00"
+    clearTimeout();
+    window.addEventListener("keydown", (e) => {
+        e.stopPropagation();
+        e.stopImmediatePropagation();
+        e.preventDefault();
+      }, true)
+    }
 
   setTimeout(updateTimer, 1000); // Update every second
 }
@@ -176,6 +183,11 @@ function loop() {
     
 // Chama o próximo frame
 }
+
+function reiniciarJogo(){
+    
+}
+
 startTimer();
 
 loop();
