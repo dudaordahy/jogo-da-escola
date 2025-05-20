@@ -169,8 +169,4 @@ function loop() {
     
 // Chama o próximo frame
 }
-
-
-
-
 loop();
