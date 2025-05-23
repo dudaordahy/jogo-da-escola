@@ -22,11 +22,6 @@ canvas {
     transform: translate(-50%, -50%);
     text-align: center;
     border-radius: 10px;
-}
-
-#reiniciar{
-    background-color: rgb(255, 255, 255);
-    border: none;
-    font-size: large;
+    display: none;
 }
 
