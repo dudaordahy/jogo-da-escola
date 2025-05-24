@@ -57,16 +57,16 @@ function drawRect(obj) {
 }
 
 // Função que desenha a pontuação na tela
-function drawScore() {
+function drawScore() { 
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "20px sans-serif";           // Fonte do texto
-    ctx.fillText("Lixo🗑️: " + pontos, 1000, 30); // Escreve o texto na tela
+    ctx.font = "25px sans-serif";           // Fonte do texto
+    ctx.fillText("Lixo🗑️: " + pontos, 1120, 35); // Escreve o texto na tela
 }
 
 function drawTimer() {
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "20px sans-serif";           // Fonte do texto
-    ctx.fillText(formattedTime, 10, 30);
+    ctx.font = "25px sans-serif";           // Fonte do texto
+    ctx.fillText(formattedTime, 1250, 35);
 }
 
 // Atualiza a posição e estado do jogador
@@ -115,9 +115,13 @@ function handleItemClick(e) {
 document.addEventListener("keydown", e => {
     if (e.key === "ArrowRight") player.x += player.speed;    // Move para a direita
     if (e.key === "ArrowLeft") player.x -= player.speed;     // Move para a esquerda
-    if (e.key === "ArrowDown") player.y += player.speed;     // Move para baixo
     if ((e.key === "ArrowUp" || e.key === " ") && player.onGround) {
         player.vy = -12;                                      // Pula (se estiver no chão)
+    }
+    if (e.key === "d") player.x += player.speed;    // Move para a direita
+    if (e.key === "a") player.x -= player.speed;     // Move para a esquerda
+    if ((e.key === "w") && player.onGround) {
+    player.vy = -12;                                      // Pula (se estiver no chão)
     }
 });
 
@@ -173,7 +177,7 @@ function loop() {
     }
 
     drawRect(ground);                                 // Desenha o chão
-    drawRect(player);                                 // Desenha o jogador
+    drawRect(player);                                // Desenha o jogador
 
     if (item.visible) drawRect(item);                 // Desenha o item se visível
 
@@ -185,9 +189,11 @@ function loop() {
 }
 
 function reiniciarJogo(){
-    
+    window.location.href = "jogo.html"
 }
-
+function voltarPagina(){
+    window.location.href = " "
+}
 startTimer();
 
 loop();
