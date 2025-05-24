@@ -23,6 +23,7 @@ canvas {
     text-align: center;
     border-radius: 10px;
     display: none;
+
 }
 
 button{
@@ -36,4 +37,3 @@ button{
     cursor: pointer;
     border: 2px solid darkred;
 }
-
