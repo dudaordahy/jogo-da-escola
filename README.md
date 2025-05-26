@@ -38,3 +38,7 @@ Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o
 | Eduarda O.       | [github.com/dudaordahy](https://github.com/dudaordahy) |
 | Maria Rita B.    | [github.com/Mariarita14](https://github.com/Mariarita14) |
 | Valentina F.     | [github.com/valentinabfarias](https://github.com/valentinabfarias) |
+
+<img width="956" alt="image" src="https://github.com/user-attachments/assets/776c51f3-4aaf-4077-91c5-57caecc14df4" />
+
+
