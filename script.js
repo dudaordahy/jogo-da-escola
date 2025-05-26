@@ -10,6 +10,24 @@ const finalizacao = document.getElementById("finalizacao")
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
+// Objeto para armazenar sprites carregados
+const sprites = {};
+
+// Função para carregar sprites
+function loadSprite(name, url) {
+    const img = new Image();
+    img.src = url;
+    img.onload = () => {
+        sprites[name] = img;
+    };
+    img.onerror = () => {
+        console.error(`Erro ao carregar sprite: ${url}`);
+    };
+}
+
+loadSprite("menina", "https://i.imgur.com/37ZXps2.png");
+loadSprite("lixo", "");
+
 // Variável que armazena os pontos do jogador
 let pontos = 0;
 
@@ -18,8 +36,10 @@ let formattedTime = "00:00:00"
 // Variável que indica se o jogador pode clicar no item
 let podeClicar = false;
 
+
 // Objeto que representa o jogador
 const player = {
+    sprite:"menina",
     x: 100,                                // Posição inicial no eixo X
     y: canvas.height - 100,                // Posição inicial no eixo Y (perto do chão)
     width: 64,                             // Largura do jogador
@@ -28,8 +48,7 @@ const player = {
     vy: 0,                                 // Velocidade vertical (para o pulo)
     gravity: 0.5,                          // Gravidade que afeta o pulo
     onGround: false,                       // Indica se está no chão
-    color: "black"                          // Cor do jogador
-};
+}
 
 // Objeto que representa o chão
 const ground = {
@@ -50,12 +69,15 @@ const item = {
     visible: true                           // Se o item está visível
 };
 
-// Função para desenhar um retângulo na tela (usada para jogador, chão, item)
-function drawRect(obj) {
-    ctx.fillStyle = obj.color;              // Define a cor de preenchimento
-    ctx.fillRect(obj.x, obj.y, obj.width, obj.height); // Desenha o retângulo
+// Função para desenhar um objeto (sprite ou retângulo)
+function drawObject(obj) {
+    if (obj.sprite && sprites[obj.sprite]) {
+        ctx.drawImage(sprites[obj.sprite], obj.x, obj.y, obj.width, obj.height);
+    } else {
+        ctx.fillStyle = obj.color || "black";
+        ctx.fillRect(obj.x, obj.y, obj.width, obj.height);
+    }
 }
-
 // Função que desenha a pontuação na tela
 function drawScore() { 
     ctx.fillStyle = "black";                // Cor do texto
@@ -174,12 +196,11 @@ function loop() {
         podeClicar = true;                            // Ativa clique no item
     } else {
         podeClicar = false;                           // Desativa se não estiver tocando
-    }
-
-    drawRect(ground);                                 // Desenha o chão
-    drawRect(player);                                // Desenha o jogador
-
-    if (item.visible) drawRect(item);                 // Desenha o item se visível
+    }  
+    
+    drawObject(ground);
+    drawObject(player);
+    if (item.visible) drawObject(item);                // Desenha o item se visível
 
     drawScore();                                      // Mostra a pontuação
     drawTimer();
