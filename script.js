@@ -25,7 +25,7 @@ function loadSprite(name, url) {
     };
 }
 
-loadSprite("menina", "https://i.imgur.com/37ZXps2.png");
+loadSprite("menina", "https://i.imgur.com/BfeQVSy.png");
 loadSprite("lixo", "");
 
 // Variável que armazena os pontos do jogador
@@ -43,7 +43,7 @@ const player = {
     x: 100,                                // Posição inicial no eixo X
     y: canvas.height - 100,                // Posição inicial no eixo Y (perto do chão)
     width: 64,                             // Largura do jogador
-    height: 64,                            // Altura do jogador
+    height: 80,                            // Altura do jogador
     speed: 8,                              // Velocidade de movimento
     vy: 0,                                 // Velocidade vertical (para o pulo)
     gravity: 0.5,                          // Gravidade que afeta o pulo
