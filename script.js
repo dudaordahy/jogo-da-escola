@@ -59,14 +59,14 @@ function drawRect(obj) {
 // Função que desenha a pontuação na tela
 function drawScore() { 
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "25px sans-serif";           // Fonte do texto
-    ctx.fillText("Lixo🗑️: " + pontos, 1120, 35); // Escreve o texto na tela
+    ctx.font = "20px sans-serif";           // Fonte do texto
+    ctx.fillText("Lixo🗑️: " + pontos, 1090, 35); // Escreve o texto na tela
 }
 
 function drawTimer() {
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "25px sans-serif";           // Fonte do texto
-    ctx.fillText(formattedTime, 1250, 35);
+    ctx.font = "20px sans-serif";           // Fonte do texto
+    ctx.fillText(formattedTime, 1190, 35);
 }
 
 // Atualiza a posição e estado do jogador
