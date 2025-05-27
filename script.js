@@ -25,8 +25,9 @@ function loadSprite(name, url) {
     };
 }
 
-loadSprite("menina", "https://i.imgur.com/BfeQVSy.png");
-loadSprite("lixo", "");
+loadSprite("menina", "https://i.imgur.com/CU9daOM.png");
+loadSprite("menina_direita", "https://i.imgur.com/AFmLwR3.png");
+loadSprite("lixo", "https://i.imgur.com/TSS6fRx.png");
 
 // Variável que armazena os pontos do jogador
 let pontos = 0;
@@ -42,7 +43,7 @@ const player = {
     sprite:"menina",
     x: 100,                                // Posição inicial no eixo X
     y: canvas.height - 100,                // Posição inicial no eixo Y (perto do chão)
-    width: 64,                             // Largura do jogador
+    width: 100,                             // Largura do jogador
     height: 80,                            // Altura do jogador
     speed: 8,                              // Velocidade de movimento
     vy: 0,                                 // Velocidade vertical (para o pulo)
@@ -61,10 +62,11 @@ const ground = {
 
 // Objeto que representa o item clicável
 const item = {
+    sprite: "lixo",
     x: Math.random() * (canvas.width - 32), // Posição X aleatória
-    y: canvas.height - 80,                  // Posição Y aleatória
-    width: 30,                              // Largura do item
-    height: 30,                             // Altura do item
+    y: canvas.height - 90,                  // Posição Y aleatória
+    width: 50,                              // Largura do item
+    height: 60,                             // Altura do item
     color: "gold",                          // Cor dourada
     visible: true                           // Se o item está visível
 };
@@ -128,7 +130,7 @@ function handleItemClick(e) {
         pontos++;                                // Incrementa pontuação
         // Reposiciona o item em uma nova posição aleatória
         item.x = Math.random() * (canvas.width - 32);
-        item.y = canvas.height - 80;
+        item.y = canvas.height - 90;
         podeClicar = false;                      // Desativa clique até nova colisão
     }
 }
