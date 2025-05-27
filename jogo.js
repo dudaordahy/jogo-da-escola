@@ -13,6 +13,23 @@ canvas.height = window.innerHeight;
 // Objeto para armazenar sprites carregados
 const sprites = {};
 
+const barra = document.querySelector('progress');
+
+function atualizarBarra(percentagem) {
+  barra.value = percentagem;
+}
+
+// Simula o carregamento
+let progresso = 0;
+const intervalo = setInterval(() => {
+  progresso += 10;
+  atualizarBarra(progresso);
+  if (progresso >= 100) {
+    clearInterval(intervalo); // Para a animação
+    // Código para remover a barra de carregamento após o carregamento
+  }
+}, 500); // Atualiza a barra a cada 0.5 segundos
+
 // Função para carregar sprites
 function loadSprite(name, url) {
     const img = new Image();
