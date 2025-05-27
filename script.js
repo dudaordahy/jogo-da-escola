@@ -27,6 +27,7 @@ function loadSprite(name, url) {
 
 loadSprite("menina", "https://i.imgur.com/CU9daOM.png");
 loadSprite("menina_direita", "https://i.imgur.com/AFmLwR3.png");
+loadSprite("menina_esquerda", "https://i.imgur.com/yDmWxEF.png");
 loadSprite("lixo", "https://i.imgur.com/TSS6fRx.png");
 
 // Variável que armazena os pontos do jogador
@@ -137,15 +138,29 @@ function handleItemClick(e) {
 
 // Adiciona controle por teclado
 document.addEventListener("keydown", e => {
-    if (e.key === "ArrowRight") player.x += player.speed;    // Move para a direita
-    if (e.key === "ArrowLeft") player.x -= player.speed;     // Move para a esquerda
+    if (e.key === "ArrowRight") {
+        player.sprite = "menina_direita";
+        player.x += player.speed
+    }   // Move para a direita
+    if (e.key === "ArrowLeft") {
+        player.sprite = "menina_esquerda";
+        player.x -= player.speed
+    }   // Move para a esquerda
     if ((e.key === "ArrowUp" || e.key === " ") && player.onGround) {
-        player.vy = -12;                                      // Pula (se estiver no chão)
+        player.sprite = "menina";
+        player.vy = -12;                            // Pula (se estiver no chão)
     }
-    if (e.key === "d") player.x += player.speed;    // Move para a direita
-    if (e.key === "a") player.x -= player.speed;     // Move para a esquerda
+    if (e.key === "d") {
+        player.sprite = "menina_direita";
+        player.x += player.speed
+    }   // Move para a direita
+    if (e.key === "a"){
+        player.sprite = "menina_esquerda";
+        player.x -= player.speed
+    }   // Move para a esquerda
     if ((e.key === "w") && player.onGround) {
-    player.vy = -12;                                      // Pula (se estiver no chão)
+        player.sprite = "menina";
+        player.vy = -12;                            // Pula (se estiver no chão)
     }
 });
 
