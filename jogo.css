@@ -6,6 +6,11 @@ html, body {
     background-size: cover;
 }
 
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/american_captain.otf/American Captain.otf') format('opentype');
+}
+
 canvas {
     display: block;   /* remove espaço extra embaixo do canvas */
 }
@@ -13,8 +18,9 @@ canvas {
 #finalizacao{
     background-color: rgb(255, 255, 255);
     font-size: large;
+    font-family: 'American Captain';
     color: darkred;
-    width: 300px;
+    width: 350px;
     height: auto;
     position: absolute;
     top: 50%;
@@ -27,8 +33,9 @@ canvas {
 
 button{
     background-color: rgb(255, 255, 255);
-    width: 100px;
-    height: 30px;
+    font-family: 'American Captain';
+    width: 150px;
+    height: 40px;
     margin: 0px 10px 10px 10px;
     color: darkred;
     border-color: black;

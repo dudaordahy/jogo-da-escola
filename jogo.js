@@ -13,23 +13,6 @@ canvas.height = window.innerHeight;
 // Objeto para armazenar sprites carregados
 const sprites = {};
 
-const barra = document.querySelector('progress');
-
-function atualizarBarra(percentagem) {
-  barra.value = percentagem;
-}
-
-// Simula o carregamento
-let progresso = 0;
-const intervalo = setInterval(() => {
-  progresso += 10;
-  atualizarBarra(progresso);
-  if (progresso >= 100) {
-    clearInterval(intervalo); // Para a animação
-    // Código para remover a barra de carregamento após o carregamento
-  }
-}, 500); // Atualiza a barra a cada 0.5 segundos
-
 // Função para carregar sprites
 function loadSprite(name, url) {
     const img = new Image();
@@ -54,7 +37,6 @@ let formattedTime = "00:00:00"
 
 // Variável que indica se o jogador pode clicar no item
 let podeClicar = false;
-
 
 // Objeto que representa o jogador
 const player = {
@@ -101,13 +83,13 @@ function drawObject(obj) {
 // Função que desenha a pontuação na tela
 function drawScore() { 
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "20px sans-serif";           // Fonte do texto
+    ctx.font = "20px American Captain";           // Fonte do texto
     ctx.fillText("Lixo🗑️: " + pontos, 1090, 35); // Escreve o texto na tela
 }
 
 function drawTimer() {
     ctx.fillStyle = "black";                // Cor do texto
-    ctx.font = "20px sans-serif";           // Fonte do texto
+    ctx.font = "20px American Captain";           // Fonte do texto
     ctx.fillText(formattedTime, 1190, 35);
 }
 

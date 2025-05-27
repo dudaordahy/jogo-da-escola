@@ -12,11 +12,17 @@ body {
   background-origin: content-box;
   background-repeat: no-repeat;
   padding-top: 10px;
+  overflow: hidden;
+}
+
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/american_captain.otf/American Captain.otf') format('opentype');
 }
 
 h1 {
   text-align: center;
-  font: url(american_captain/American\ Captain.otf);
+  font-family: 'American Captain';
 }
 
 .continentes p {
@@ -27,12 +33,13 @@ h1 {
 a{
   text-decoration-line: none;
   color: white;
-  font-size: 16px;
+  font-size: 18px;
+  font-family: 'American Captain';
 }
 
 a:hover {
   color: rgb(25, 160, 25);
-  font-size: 18px;
+  font-size: 20px;
 }
 
 #p1 {
