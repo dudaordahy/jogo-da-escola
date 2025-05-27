@@ -24,16 +24,16 @@ h1 {
   color: white;
 }
 
-p { 
-  color: black;
+a{
+  text-decoration-line: none;
+  color: white;
   font-size: 16px;
 }
 
-p:hover {
+a:hover {
   color: rgb(25, 160, 25);
   font-size: 18px;
 }
-
 
 #p1 {
   right: 870px;
