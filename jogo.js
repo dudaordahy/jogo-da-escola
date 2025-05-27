@@ -230,7 +230,7 @@ function reiniciarJogo(){
     window.location.href = "jogo.html"
 }
 function voltarPagina(){
-    window.location.href = " "
+    window.location.href = "pagina_inicial.html"
 }
 startTimer();
 
