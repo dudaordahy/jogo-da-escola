@@ -2,8 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* evita scroll */
-    background: url(imagens/cidade.jpg);
-    background-size: cover;
+    background: url(imagens/nova_iorque.jpg);
+    background-size: contain;
 }
 
 canvas {
