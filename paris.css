@@ -2,8 +2,8 @@ html, body {
     margin: 0;
     padding: 0;
     overflow: hidden; /* evita scroll */
-    background: url(imagens/paris.png);
-    background-size: cover;
+    background: url(imagens/paris2.png);
+    background-size: contain;
 }
 
 canvas {
