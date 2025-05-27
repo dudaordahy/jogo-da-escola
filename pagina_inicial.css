@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/american_captain.otf/American Captain.otf') format('opentype');
+}
+
 button{
     background-color: rgb(0, 0, 0);
     color: white;
@@ -8,16 +13,20 @@ button{
     border: none;
     border-radius: 10px;
     cursor: pointer;
+    font-family: 'American Captain';
+
 }
 
 button:hover{
     background-color: rgb(26, 23, 23);
 }
 
+
 h2{
+    font-family: 'American Captain';
+    font-size: 150px;
     text-align: center;
     margin-top: 100px;
-    font-size: 60px;
     margin-bottom: 70px;
 }
 
