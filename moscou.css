@@ -1,0 +1,45 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* evita scroll */
+    background: url(imagens/moscou.jpg);
+    background-size: cover;
+}
+
+@font-face {
+    font-family: 'American Captain';
+    src: url('fonts/american_captain.otf/American Captain.otf') format('opentype');
+}
+
+canvas {
+    display: block;   /* remove espaço extra embaixo do canvas */
+}
+
+#finalizacao{
+    background-color: rgb(255, 255, 255);
+    font-size: large;
+    font-family: 'American Captain';
+    color: darkred;
+    width: 350px;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 10px;
+    display: none;
+}
+
+button{
+    background-color: rgb(255, 255, 255);
+    font-family: 'American Captain';
+    width: 150px;
+    height: 40px;
+    margin: 0px 10px 10px 10px;
+    color: darkred;
+    border-color: black;
+    border-radius: 10px;
+    cursor: pointer;
+    border: 2px solid darkred;
+}
