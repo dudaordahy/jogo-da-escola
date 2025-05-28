@@ -3,7 +3,7 @@ html, body {
     padding: 0;
     overflow: hidden; /* evita scroll */
     background: url(imagens/moscou.jpg);
-    background-size: cover;
+    background-size: contain;
 }
 
 @font-face {
