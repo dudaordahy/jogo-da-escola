@@ -227,7 +227,7 @@ function loop() {
 }
 
 function reiniciarJogo(){
-    window.location.href = "jogo.html"
+    window.location.href = "nova_iorque.html"
 }
 function voltarPagina(){
     window.location.href = "pagina_inicial.html"

@@ -227,7 +227,7 @@ function loop() {
 }
 
 function reiniciarJogo(){
-    window.location.href = "jogo.html"
+    window.location.href = "cidade_do_cabo.html"
 }
 function voltarPagina(){
     window.location.href = "pagina_inicial.html"
