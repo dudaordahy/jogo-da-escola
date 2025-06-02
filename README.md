@@ -40,7 +40,7 @@ Um jogo divertido, onde o jogador deve ser rápido em coletar o lixo antes que o
 | Valentina F.     | [github.com/valentinabfarias](https://github.com/valentinabfarias) |
 
 ![image](https://github.com/user-attachments/assets/6eb6f927-c3d1-47ca-aab6-0da3a12be974)
-![image](https://github.com/user-attachments/assets/cdb324b2-1df6-4bff-b266-73dceba62cf5)
+![image](https://github.com/user-attachments/assets/f4496e3a-8082-4d6b-9e2c-5b8de4e03511)
 ![image](https://github.com/user-attachments/assets/fe9f8a8f-23b3-4f34-8283-dd3aa7dccf62)
 ![image](https://github.com/user-attachments/assets/8ad63609-ab00-429e-b9bf-a1898843a030)
 ![image](https://github.com/user-attachments/assets/e9c5aa52-d9d7-4eac-8d9c-567a5789634f)
